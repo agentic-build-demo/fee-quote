@@ -1,0 +1,20 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "fee-quote"
+version = "0.0.1"
+description = "Quote the fee for an amount and a customer tier"
+readme = "README.md"
+license = { text = "MIT" }
+requires-python = ">=3.10"
+
+[project.optional-dependencies]
+test = ["pytest>=8"]
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
